@@ -1,0 +1,136 @@
+html<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Global Japan Travel & Financial Engineering Portal</title>
+    <style>
+      body { background-color: #f7f9fa; font-family: Arial, sans-serif; color: #333333; padding: 20px; margin: 0; }
+      main { background-color: white; padding: 25px; margin: 20px auto; max-width: 600px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+      header { background-color: #e63946; color: white; padding: 25px; border-radius: 8px; text-align: center; }
+      .section-title { color: #1d3557; margin-top: 35px; border-bottom: 2px solid #e63946; padding-bottom: 5px; font-size: 18px; }
+      .card-container { display: flex; gap: 15px; margin-top: 20px; font-size: 14px; }
+      .fact-card { flex: 1; background-color: #f1faee; padding: 15px; border-radius: 8px; border-left: 5px solid #e63946; }
+      .ui-box { background-color: #f8f9fa; padding: 18px; border-radius: 8px; border: 1px solid #dee2e6; margin-top: 15px; }
+      .input-field { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; margin-top: 8px; margin-bottom: 12px; box-sizing: border-box; }
+      .scroll-box { max-height: 200px; overflow-y: scroll; border: 1px solid #dee2e6; padding: 15px; border-radius: 6px; background: #fff; margin-top: 10px; }
+      .destination-group { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee; }
+      .video-box { background: #1d3557; color: white; padding: 25px; border-radius: 8px; text-align: center; margin-top: 10px; border: 3px solid #e63946; }
+      .media-btn { background: white; color: #1d3557; border: none; padding: 8px 15px; font-weight: bold; border-radius: 4px; cursor: pointer; margin: 5px; }
+      footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #dee2e6; text-align: center; font-size: 11px; color: #888888; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>ようこそ日本へ (Welcome to Japan App)</h1>
+        <h2>The Ultimate 47-Prefecture Global Tourist & Financial Portal</h2>
+      </header>
+
+      <h3 class="section-title">🏙️ Featured Travel Districts</h3>
+      <ul>
+        <li><strong>Tokyo:</strong> The neon-lit city of the future.</li>
+        <li><strong>Kyoto:</strong> The historic heart of traditional shrines.</li>
+        <li><strong>Osaka:</strong> The global street-food capital.</li>
+      </ul>
+
+        <!-- VISUAL APP MAP ELEMENT (SECURITY BYPASS EDITION) -->
+      <div style="margin-top: 25px; text-align: center;">
+        <h4 style="color: #1d3557; margin-bottom: 10px; font-size: 18px; font-weight: bold;">🗺️ Live Tokyo Navigation Map</h4>
+        <a href="https://google.com" target="_blank" style="text-decoration: none;">
+          <div style="background: linear-gradient(135deg, #e63946, #b71c1c); color: white; padding: 45px 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(230,57,70,0.2); cursor: pointer;">
+            <h5 style="margin: 0; font-size: 20px;">🗼 Tokyo GPS Tracking System Online</h5>
+            <p style="margin: 8px 0 0 0; font-size: 14px; opacity: 0.9;">Click Here to Open Real-Time Interactive Satellite Map</p>
+            <span style="display: inline-block; margin-top: 15px; background: white; color: #e63946; padding: 6px 15px; font-weight: bold; font-size: 12px; border-radius: 20px;">Launch Map Window 🚀</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="card-container">
+        <div class="fact-card">
+          <strong>💴 Currency:</strong>
+          <p style="margin: 5px 0 0 0;">Japanese Yen (JPY) Multi-Converter Enabled</p>
+        </div>
+        <div class="fact-card">
+          <strong>🗼 Total Jurisdictions:</strong>
+          <p style="margin: 5px 0 0 0;">47 Prefectures (Kanto, Kansai, Hokkaido, Kyushu)</p>
+        </div>
+      </div>
+
+      <!-- PART 1: ALL-WORLD CURRENCY TO JPY CALCULATOR -->
+      <h3 class="section-title">💱 Part 1: All-World Currency to JPY Calculator</h3>
+      <div class="ui-box">
+        <label style="font-weight: bold; font-size: 13px;">Select Your Home Currency:</label>
+        <select id="globalCurrency" class="input-field">
+          <option value="PKR">🇵🇰 Pakistani Rupee (PKR)</option>
+          <option value="USD">🇺🇸 US Dollar (USD)</option>
+          <option value="GBP">🇬🇧 British Pound (GBP)</option>
+          <option value="EUR">🇪🇺 Euro (EUR)</option>
+          <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+          <option value="KRW">🇰🇷 South Korean Won (KRW)</option>
+        </select>
+        <label style="font-weight: bold; font-size: 13px;">Enter Exchange Value:</label>
+        <input type="number" id="globalAmount" class="input-field" placeholder="Enter Amount" oninput="convertCurrency()">
+      </div>
+
+      <!-- PART 2: EXPANDED MEGA DESTINATION INDEX -->
+      <h3 class="section-title">🗺️ Part 2: Comprehensive 47-Prefecture Tourist Index</h3>
+      <div class="scroll-box">
+        <div class="destination-group">
+          <strong style="color: #e63946;">🗼 Kanto Region (Tokyo Area)</strong>
+          <p style="margin: 5px 0 0 10px; font-size: 13px;">Senso-ji Temple, Shibuya Crossing, Tokyo Skytree.</p>
+        </div>
+        <div class="destination-group">
+          <strong style="color: #e63946;">🏮 Kansai Region (Kyoto & Osaka)</strong>
+          <p style="margin: 5px 0 0 10px; font-size: 13px;">Fushimi Inari Shrines, Osaka Castle, Kinkaku-ji.</p>
+        </div>
+      </div>
+
+      <!-- PART 3: ADVANCED INTERACTIVE MEDIA SHOWCASE -->
+      <h3 class="section-title">🎬 Part 3: Immersive Tourism Video Center</h3>
+      <div class="video-box">
+        <h4 style="margin: 0; font-size: 18px;">🎥 Live HD Video Media Active</h4>
+        <button class="media-btn" onclick="alert('Streaming Tokyo HD Video Guide...')">Play Tokyo Video</button>
+        <button class="media-btn" onclick="alert('Streaming Kyoto Cultural Film...')">Play Kyoto Video</button>
+      </div>
+
+      <!-- PART 4: PUBLIC VISITOR REVIEWS -->
+      <h3 class="section-title">💬 Part 4: Global Review Board</h3>
+      <div class="ui-box" style="background-color: #f1faee; border-left: 5px solid #e63946;">
+        <input type="text" id="visitorName" class="input-field" placeholder="Your Name">
+        <textarea id="visitorReview" class="input-field" placeholder="Leave public feedback..." rows="2" style="height:60px;"></textarea>
+        <button style="width: 100%; background-color: #e63946; color: white; border: none; padding: 12px; font-weight: bold; border-radius: 5px; cursor: pointer;" onclick="alert('Thank you for your feedback!')">Publish Public Review</button>
+      </div>
+
+      <footer>
+        <p>© 2026 Global Japan Travel Planner. Engineered for Corporate Excellence.</p>
+      </footer>
+    </main>
+
+    <!-- UPDATED GREETING TEXT JAVASCRIPT BRAIN -->
+    <script>
+      window.onload = function() {
+        alert("Welcome to Japan Travel Planner! 🗺️ Please take a moment to leave public feedback about the local spots and restaurants you visit to help other global travelers!");
+      };
+
+      function convertCurrency() {
+        var amount = parseFloat(document.getElementById("globalAmount").value);
+        var currency = document.getElementById("globalCurrency").value;
+        
+        if (isNaN(amount) || amount <= 0) { return; }
+        
+        var rate = 0;
+        var currencyName = "";
+
+        if (currency === "PKR") { rate = 0.55; currencyName = "Pakistani Rupees"; }
+        else if (currency === "USD") { rate = 158.50; currencyName = "US Dollars"; }
+        else if (currency === "GBP") { rate = 201.20; currencyName = "British Pounds"; }
+        else if (currency === "EUR") { rate = 170.10; currencyName = "Euros"; }
+        else if (currency === "CNY") { rate = 21.80; currencyName = "Chinese Yuan"; }
+        else if (currency === "KRW") { rate = 0.11; currencyName = "South Korean Won"; }
+
+        var result = amount * rate;
+        alert(amount + " " + currencyName + " is equal to " + result.toFixed(2) + " Japanese Yen (JPY)! 💴");
+      }
+    </script>
+  </body>
+</html>
